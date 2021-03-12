@@ -13,6 +13,7 @@ namespace UserRegistration
         public static string lastName;
         public static string email;
         public static string mobileNumber;
+        public static string password;
 
         public static bool UserName(string userName) 
         {
@@ -33,6 +34,11 @@ namespace UserRegistration
         {
             return Regex.IsMatch(mobileNumber, @"^[0-9]{2}[ ][0-9]{10}$");
         }
+        
+        public static bool Password(string password)
+        {
+            return Regex.IsMatch(password, @"^[A-Za-z0-9.#+*/$@!%^&_-]{8,}$");
+        }
 
         static void Main(string[] args)
         {
@@ -51,6 +57,10 @@ namespace UserRegistration
             Console.WriteLine("Enter a Valid Mobile Number: ");
             mobileNumber = Console.ReadLine();
             Console.WriteLine(MobileNumber(mobileNumber) + "\n");
+
+            Console.WriteLine("Enter a Valid Password: ");
+            password = Console.ReadLine();
+            Console.WriteLine(Password(password) + "\n");
 
             Console.ReadKey();
         }
