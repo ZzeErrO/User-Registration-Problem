@@ -11,6 +11,7 @@ namespace UserRegistration
     {
         public static string userName;
         public static string lastName;
+        public static string email;
 
         public static bool UserName(string userName) 
         {
@@ -22,6 +23,11 @@ namespace UserRegistration
             return Regex.IsMatch(lastName, @"^[A-Z]{1}[a-z0-9A-Z]{2,}$");
         }
 
+        public static bool Email(string email)
+        {
+            return Regex.IsMatch(email, @"^[A-Z0-9a-z]+([.#_+-][A-Z0-9a-z]+)*[@][A-Z0-9a-z]+([.][A-Za-z]{2,3}){0,2}$");
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Enter a Valid User Name: ");
@@ -30,7 +36,11 @@ namespace UserRegistration
 
             Console.WriteLine("Enter a Valid Last Name: ");
             lastName = Console.ReadLine();
-            Console.WriteLine(UserName(lastName)+"\n");
+            Console.WriteLine(LastName(lastName)+"\n");
+
+            Console.WriteLine("Enter a Valid Email: ");
+            email = Console.ReadLine();
+            Console.WriteLine(Email(email) + "\n");
 
             Console.ReadKey();
         }
