@@ -37,7 +37,7 @@ namespace UserRegistration
         
         public static bool Password(string password)
         {
-            return Regex.IsMatch(password, @"^[A-Za-z0-9.#+*/$@!%^&_-]{8,}$");
+            return Regex.IsMatch(password, @"^(?=.*[A-Z])[A-Za-z0-9.#+*/$@!%^&_-]{8,}$");
         }
 
         static void Main(string[] args)
