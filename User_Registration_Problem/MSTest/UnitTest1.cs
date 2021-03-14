@@ -59,7 +59,7 @@ namespace MSTest
         }
 
         [TestMethod]
-        public void GivenPasswordRule1_WhenValidated_ThenReturnsTrue()
+        public void GivenPasswordRule2_WhenValidated_ThenReturnsTrue()
         {
             //AAA
             //Arrange
