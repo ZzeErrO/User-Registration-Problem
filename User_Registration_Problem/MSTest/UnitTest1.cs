@@ -59,16 +59,16 @@ namespace MSTest
         }
 
         [TestMethod]
-        public void GivenPasswordRule3_WhenValidated_ThenReturnsTrue()
+        public void GivenPasswordRule4_WhenValidated_ThenReturnsTrue()
         {
             //AAA
             //Arrange
-            string password = "I@mTheEmperor0OfAllLivingBeings.";
+            string password = "I@mTheEmperor0OfAllLivingBeings";
             //Act
             bool result = Program.Password(password);
             //Assert
             Assert.AreEqual(true, result);
-            
+
         }
 
     }
