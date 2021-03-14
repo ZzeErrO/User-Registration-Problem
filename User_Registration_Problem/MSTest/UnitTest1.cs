@@ -19,5 +19,18 @@ namespace MSTest
             Assert.AreEqual(true, result);
         }
 
+        [TestMethod]
+        public void GivenLastName_WhenValidated_ThenReturnsTrue()
+        {
+            //AAA
+            //Arrange
+            string lastName = "Jaware";
+            //Act
+            bool result = Program.LastName(lastName);
+            //Assert
+            Assert.AreEqual(true, result);
+
+        }
+
     }
 }

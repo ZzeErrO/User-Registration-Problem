@@ -37,7 +37,7 @@ namespace UserRegistration
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter a Valid User Name: ");
+            Console.WriteLine("Enter a Valid First Name: ");
             userName = Console.ReadLine();
             Console.WriteLine(UserName(userName) + "\n");
 
