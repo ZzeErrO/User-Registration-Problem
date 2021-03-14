@@ -32,5 +32,18 @@ namespace MSTest
 
         }
 
+        [TestMethod]
+        public void GivenEmail_WhenValidated_ThenReturnsTrue()
+        {
+            //AAA
+            //Arrange
+            string email = "abc123@gmail.com";
+            //Act
+            bool result = Program.Email(email);
+            //Assert
+            Assert.AreEqual(true, result);
+
+        }
+
     }
 }
