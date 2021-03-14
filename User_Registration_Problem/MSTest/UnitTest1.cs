@@ -59,7 +59,7 @@ namespace MSTest
         }
 
         [TestMethod]
-        public void GivenPasswordRule2_WhenValidated_ThenReturnsTrue()
+        public void GivenPasswordRule3_WhenValidated_ThenReturnsTrue()
         {
             //AAA
             //Arrange
@@ -68,7 +68,7 @@ namespace MSTest
             bool result = Program.Password(password);
             //Assert
             Assert.AreEqual(true, result);
-
+            
         }
 
     }
