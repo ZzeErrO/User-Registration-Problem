@@ -22,7 +22,7 @@ namespace UserRegistration
 
         public static bool Email(string email)
         {
-            return Regex.IsMatch(email, @"^[A-Z0-9a-z]+[@][A-Z0-9a-z]+[.][A-Za-z]{2,3}$");
+            return Regex.IsMatch(email, @"^[A-Z0-9a-z]+([.#_+-][A-Z0-9a-z]+)*[@][A-Z0-9a-z]+([.][A-Za-z]{2,3}){1,2}$");
         }
 
         public static bool MobileNumber(string mobileNumber)

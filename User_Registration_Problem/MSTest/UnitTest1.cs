@@ -37,7 +37,7 @@ namespace MSTest
         {
             //AAA
             //Arrange
-            string email = "abc123@gmail.com";
+            string email = "abc+123-xyz987.pqr@gmail456.com.in";
             //Act
             bool result = Program.Email(email);
             //Assert
