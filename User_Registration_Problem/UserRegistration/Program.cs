@@ -3,14 +3,13 @@ using System.Text.RegularExpressions;
 
 namespace UserRegistration
 {
-    class Program
+    public class Program
     {
         public static string userName;
         public static string lastName;
         public static string email;
         public static string mobileNumber;
         public static string password;
-
         public static bool UserName(string userName) 
         {
             return Regex.IsMatch(userName, @"^[A-Z]{1}[a-z0-9A-Z]{2,}$");
