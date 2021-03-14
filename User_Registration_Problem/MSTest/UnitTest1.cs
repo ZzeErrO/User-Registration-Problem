@@ -45,5 +45,18 @@ namespace MSTest
 
         }
 
+        [TestMethod]
+        public void GivenMobileNumber_WhenValidated_ThenReturnsTrue()
+        {
+            //AAA
+            //Arrange
+            string mobileNumber = "91 8524561397";
+            //Act
+            bool result = Program.MobileNumber(mobileNumber);
+            //Assert
+            Assert.AreEqual(true, result);
+
+        }
+
     }
 }
