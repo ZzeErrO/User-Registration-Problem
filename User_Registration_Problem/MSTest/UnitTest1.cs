@@ -1,12 +1,26 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using UserRegistration;
+using System.Collections.Generic;
 
 namespace MSTest
 {
     [TestClass]
     public class UnitTest1
     {
+        private static List<string> list1 = new List<string>()
+        {
+            "abc@yahoo.com",
+            "abc-100@yahoo.com",
+            "abc.100@yahoo.com",
+            "abc111@abc.com",
+            "abc-100@abc.net",
+            "abc.100@abc.com.au",
+            "abc@1.com",
+            "abc@gmail.com.com",
+            "abc+100@gmail.com"
+        };
+
         [TestMethod]
         public void GivenFirstName_WhenValidated_ThenReturnsTrue()
         {
@@ -46,11 +60,27 @@ namespace MSTest
         }
 
         [TestMethod]
+        public void GivenMultipleEmail_WhenValidated_ThenReturnsTrue()
+        {
+            //AAA
+            //Arrange
+            //Act
+            foreach (var item in list1)
+            {
+                //Act
+                bool result = Program.Email(item);
+                //Assert
+                Assert.AreEqual(true, result);
+            }
+
+        }
+
+        [TestMethod]
         public void GivenMobileNumber_WhenValidated_ThenReturnsTrue()
         {
             //AAA
             //Arrange
-            string mobileNumber = "91 8524561397";
+            string mobileNumber = "91 8426103579";
             //Act
             bool result = Program.MobileNumber(mobileNumber);
             //Assert
